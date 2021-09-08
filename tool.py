@@ -131,7 +131,7 @@ def handle_photo():
             list_info[-1]['arr']['type'].append('image')
     list_info.reverse()  # 翻转
     final_dict = {"list": list_info}
-    with open("../blog/source/photos/data.json","w") as fp:
+    with open("../source/photos/data.json","w") as fp:
         json.dump(final_dict, fp)
 
 def cut_photo():
@@ -140,7 +140,7 @@ def cut_photo():
     ----------
     调用Graphics类中的裁剪算法，将src_dir目录下的文件进行裁剪（裁剪成正方形）
     """
-    src_dir = "../blog/source/assets/img/"
+    src_dir = "../source/assets/img/"
     if directory_exists(src_dir):
         if not directory_exists(src_dir):
             make_directory(src_dir)
